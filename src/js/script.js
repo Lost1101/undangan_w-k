@@ -131,3 +131,5 @@ function getParamValue(param) {
       // Tambahkan event listener untuk tombol
       document.getElementById('toggleButton').addEventListener('click', toggleAudio);
 
+      document.addEventListener('contextmenu', event => event.preventDefault());
+
