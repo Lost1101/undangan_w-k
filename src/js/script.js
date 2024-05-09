@@ -131,5 +131,105 @@ function getParamValue(param) {
       // Tambahkan event listener untuk tombol
       document.getElementById('toggleButton').addEventListener('click', toggleAudio);
 
-      document.addEventListener('contextmenu', event => event.preventDefault());
+      // Deteksi perubahan visibilitas halaman
+      document.addEventListener("visibilitychange", function() {
+        if (document.visibilityState === 'hidden') {
+          // Hentikan musik saat halaman tidak terlihat
+          audio.pause();
+        } else {
+          // Lanjutkan memainkan musik saat halaman terlihat kembali
+          audio.play();
+        }
+      });
+
+      // Event listener untuk membuka modal teks saat tombol di-klik
+      document.getElementById("openModalBtn").addEventListener("click", function() {
+        document.getElementById("textModal").style.display = "block";
+        });
+
+        // Event listener untuk menutup modal teks saat tombol close di-klik
+        document.querySelector("#textModal .close-text").addEventListener("click", function() {
+        document.getElementById("textModal").style.display = "none";
+        });
+
+        // Event listener untuk menutup modal teks saat meng-klik di luar modal
+        window.addEventListener("click", function(event) {
+        var modal = document.getElementById("textModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        });
+
+        // Event listener untuk membuka modal gambar saat gambar di-klik
+        $(document).on('click', '.brick img', function() {
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImg");
+
+        modal.style.display = "block";
+        modalImg.src = this.src;
+
+        // Event listener untuk menutup modal gambar saat tombol close di-klik
+        var span = document.getElementsByClassName("close-image")[0];
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        });
+
+        // Event listener untuk menutup modal gambar saat meng-klik di luar modal
+        window.onclick = function(event) {
+        var modal = document.getElementById("imageModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
+
+        // Event listener untuk menutup modal teks saat tombol close di-klik
+        document.querySelector("#open-modal .open-button").addEventListener("click", function() {
+        var element = document.getElementById("open-modal");
+        element.classList.add("animate-fadedown");
+        setTimeout(function() {
+          element.classList.add("hidden");
+        }, 1500);
+        });
+
+        var falling = true;
+
+    TweenLite.set("#container",{perspective:600})
+    //TweenLite.set("img",{xPercent:"-50%",yPercent:"-50%"})
+
+    var total = 10;
+    var container = document.getElementById("container"),	w = window.innerWidth , h = window.innerHeight;
+    
+    for (i=0; i<total; i++){ 
+    var Div = document.createElement('div');
+    var Div2 = document.createElement('div');
+    var Div3 = document.createElement('div');
+    TweenLite.set(Div,{attr:{class:'dot'},x:R(0,w),y:R(-200,-150),z:R(-200,200),xPercent:"-50%",yPercent:"-50%"});
+    TweenLite.set(Div2,{attr:{class:'dot2'},x:R(0,w),y:R(-200,-150),z:R(-200,200),xPercent:"-50%",yPercent:"-50%"});
+    TweenLite.set(Div3,{attr:{class:'dot3'},x:R(0,w),y:R(-200,-150),z:R(-200,200),xPercent:"-50%",yPercent:"-50%"});
+    container.appendChild(Div);
+    container.appendChild(Div2);
+    container.appendChild(Div3);
+    animm(Div);
+    animm2(Div2);
+    animm3(Div3);
+    }
+    
+    function animm(elm){   
+    TweenMax.to(elm,R(6,15),{y:h+100,ease:Linear.easeNone,repeat:-1,delay:-15});
+    TweenMax.to(elm,R(4,8),{x:'+=100',rotationZ:R(0,180),repeat:-1,yoyo:true,ease:Sine.easeInOut});
+    TweenMax.to(elm,R(2,8),{repeat:-1,yoyo:true,ease:Sine.easeInOut,delay:-5});
+};
+function animm2(elm){   
+TweenMax.to(elm,R(6,15),{y:h+100,ease:Linear.easeNone,repeat:-1,delay:-25});
+TweenMax.to(elm,R(4,8),{x:'+=100',rotationZ:R(0,180),repeat:-1,yoyo:true,ease:Sine.easeInOut});
+TweenMax.to(elm,R(2,8),{repeat:-1,yoyo:true,ease:Sine.easeInOut,delay:-5});
+};
+function animm3(elm){   
+TweenMax.to(elm,R(6,15),{y:h+100,ease:Linear.easeNone,repeat:-1,delay:-5});
+TweenMax.to(elm,R(4,8),{x:'+=100',rotationZ:R(0,180),repeat:-1,yoyo:true,ease:Sine.easeInOut});
+TweenMax.to(elm,R(2,8),{repeat:-1,yoyo:true,ease:Sine.easeInOut,delay:-5});
+};
+
+function R(min,max) {return min+Math.random()*(max-min)};
 

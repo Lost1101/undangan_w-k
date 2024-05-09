@@ -14,7 +14,8 @@ module.exports = {
       },
       fontFamily: {
         'montserrat' : "Montserrat",
-        'junge' : "Junge"
+        'junge' : "Junge",
+        'dancing' : "Dancing Script"
       },
       screens: {
         'phone': '480px',
@@ -28,6 +29,20 @@ module.exports = {
         'desktop': '1280px',
         // => @media (min-width: 1280px) { ... }
       },
+      keyframes: {
+        fadedown: {
+          '0%': {top:'0px', opacity: '1'},
+          '100%': {top:'200px', opacity: '0'}
+        },
+        slowspin: {
+          '0%': {transform: 'rotate(0deg)'},
+          '100%': {transform: 'rotate(360deg)'}
+        }
+      },
+      animation: {
+        fadedown : 'fadedown 2s ease-out forwards',
+        slowspin : 'slowspin 10s infinite linear'
+      }
     },
   },
   plugins: [],
