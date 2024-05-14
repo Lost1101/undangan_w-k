@@ -1249,20 +1249,16 @@ video {
     margin: 2.5rem;
   }
 
-  .tablet\:mt-60 {
-    margin-top: 15rem;
+  .tablet\:mt-56 {
+    margin-top: 14rem;
   }
 
-  .tablet\:mt-20 {
-    margin-top: 5rem;
+  .tablet\:mt-10 {
+    margin-top: 2.5rem;
   }
 
   .tablet\:mt-0 {
     margin-top: 0px;
-  }
-
-  .tablet\:mt-56 {
-    margin-top: 14rem;
   }
 
   .tablet\:flex {
@@ -1315,11 +1311,6 @@ video {
     line-height: 1.75rem;
   }
 
-  .tablet\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
   .tablet\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -1336,20 +1327,16 @@ video {
     margin: 2.5rem;
   }
 
-  .laptop\:mt-60 {
-    margin-top: 15rem;
+  .laptop\:mt-56 {
+    margin-top: 14rem;
   }
 
-  .laptop\:mt-20 {
-    margin-top: 5rem;
+  .laptop\:mt-10 {
+    margin-top: 2.5rem;
   }
 
   .laptop\:mt-0 {
     margin-top: 0px;
-  }
-
-  .laptop\:mt-56 {
-    margin-top: 14rem;
   }
 
   .laptop\:block {
@@ -1380,19 +1367,14 @@ video {
     padding: 3.5rem;
   }
 
-  .laptop\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
+  .laptop\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .laptop\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .laptop\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 
   .laptop\:text-5xl {
@@ -1414,8 +1396,8 @@ video {
     margin: 2.5rem;
   }
 
-  .desktop\:mt-20 {
-    margin-top: 5rem;
+  .desktop\:mt-10 {
+    margin-top: 2.5rem;
   }
 
   .desktop\:mt-0 {
@@ -1454,19 +1436,14 @@ video {
     padding: 3.5rem;
   }
 
-  .desktop\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
+  .desktop\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .desktop\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .desktop\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 
   .desktop\:text-5xl {
