@@ -15,7 +15,9 @@ module.exports = {
       fontFamily: {
         'montserrat' : "Montserrat",
         'junge' : "Junge",
-        'dancing' : "Dancing Script"
+        'dancing' : "Dancing Script",
+        'garamond' : "Cormorant Garamond",
+        'parisienne' : "Parisienne"
       },
       screens: {
         'phone': '480px',

@@ -1,3 +1,4 @@
+document.addEventListener('contextmenu', event => event.preventDefault());
 // Set the date we're counting down to
 var countDownDate = new Date("June 23, 2024 08:00:00").getTime();
     
@@ -17,8 +18,8 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("countdown").innerHTML = "<div class='flex justify-center'> <div class='flex justify-evenly w-full phone:w-full tablet:w-1/2 laptop:w-1/2 desktop:w-1/2'> <div>" + "<p class='text-3xl phone:text-3xl tablet:text-5xl laptop:text-5xl desktop:text-5xl'>" + days + "</p>" + "<p class='block text-sm text-center'>Hari</p></div>" + "<div>" + "<p class='text-3xl phone:text-3xl tablet:text-5xl laptop:text-5xl desktop:text-5xl'>" + hours + "</p>" + "<p class='text-sm text-center block'>Jam</p></div>" + "<div>"
-  + "<p class='text-3xl phone:text-3xl tablet:text-5xl laptop:text-5xl desktop:text-5xl'>" + minutes + "</p>" + "<p class='text-sm text-center block'>Menit</p></div>" + "<div>" + "<p class='text-3xl phone:text-3xl tablet:text-5xl laptop:text-5xl desktop:text-5xl'>" + seconds +  "</p>" +"<p class='text-sm text-center block'>Detik</p></div>" + "</div> </div>";
+  document.getElementById("countdown").innerHTML = "<div class='flex justify-center font-garamond'> <div class='flex justify-evenly w-full phone:w-full tablet:w-1/2 laptop:w-1/2 desktop:w-1/2'> <div>" + "<p class='text-3xl phone:text-3xl tablet:text-5xl laptop:text-5xl desktop:text-5xl'>" + days + "</p>" + "<p class='block text-lg text-center'>Hari</p></div>" + "<div>" + "<p class='text-3xl phone:text-3xl tablet:text-5xl laptop:text-5xl desktop:text-5xl'>" + hours + "</p>" + "<p class='text-lg text-center block'>Jam</p></div>" + "<div>"
+  + "<p class='text-3xl phone:text-3xl tablet:text-5xl laptop:text-5xl desktop:text-5xl'>" + minutes + "</p>" + "<p class='text-lg text-center block'>Menit</p></div>" + "<div>" + "<p class='text-3xl phone:text-3xl tablet:text-5xl laptop:text-5xl desktop:text-5xl'>" + seconds +  "</p>" +"<p class='text-lg text-center block'>Detik</p></div>" + "</div> </div>";
     
   // If the count down is over, write some text 
   if (distance < 0) {

@@ -7,9 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/faf88445ba.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Junge&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&display=swap" rel="stylesheet">
     <link href="./output.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
     <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
@@ -41,7 +39,16 @@
             display: flex;
             position: relative;
             width: 100%;
-            height: 300px; /* Sesuaikan tinggi dengan kebutuhan */
+            height: 200px;
+        }
+
+        @media only screen and (min-width: 640px) {
+            .carousel-inner {
+            display: flex;
+            position: relative;
+            width: 100%;
+            height: 400px;
+        }
         }
         
         .carousel-slide {
@@ -157,15 +164,15 @@
 </head>
 <body>
     <div class="justify-center phone:block tablet:flex laptop:flex desktop:flex">
-        <div class="container phone:w-full tablet:w-3/5 laptop:w-3/5 desktop:w-3/5">
+        <div class="container w-full phone:w-full tablet:w-3/5 laptop:w-3/5 desktop:w-3/5">
             <div class="flex justify-evenly bg-white fixed h-full w-full z-10 phone:w-full tablet:w-3/5 laptop:w-3/5 desktop:w-3/5" id="open-modal">
                 <div id="container" class="absolute w-1 h-full top-0 left-0"></div>
                 <div class="h-full">
-                    <img src="./img/flower2.png" alt="" class="w-48 -scale-x-100 mt-96 phone:mt-48 tablet:mt-48 laptop:mt-48">
+                    <img src="./img/flower2.png" alt="" class="w-48 -scale-x-100 mt-96 phone:mt-48 tablet:mt-60 laptop:mt-60">
                 </div>
                 <div class="font-montserrat">
-                    <div class="mt-24 phone:mt-20 tablet:mt-14 laptop:mt-14 desktop:mt-14">
-                        <p class="text-center text-base phone:text-lg tablet:text-2xl laptop:text-2xl desktop:text-2xl font-semibold">YOU ARE INVITED TO</p>
+                    <div class="mt-24 phone:mt-20 tablet:mt-20 laptop:mt-20 desktop:mt-20">
+                        <p class="text-center text-base phone:text-lg tablet:text-2xl laptop:text-3xl desktop:text-3xl font-semibold">YOU ARE INVITED TO</p>
                         <p class="text-center text-sm phone:text-sm tablet:text-xl laptop:text-xl desktop:text-xl">THE WEDDING PARTY</p>
                         <div class="flex justify-center mt-5">
                             <div class="flex justify center text-center">
@@ -177,22 +184,22 @@
                         </div>
                     </div>
                     </div>
-                    <div class="font-bold tracking-widest text-center mb-5">
+                    <div class="font-bold tracking-widest text-center">
                         <center>
-                            <img src="./img/logo.png" alt="" class="w-72">
+                            <img src="./img/logo.png" alt="" class="w-64 rounded-lg">
                         </center>
-                        <p class="text-center font-junge text-xs phone:text-xs tablet:text-xl laptop:text-xl desktop:text-xl">SUNDAY . JUNE 23 . 2024</p>
+                        <p class="text-center font-garamond text-xs phone:text-xs tablet:text-2xl laptop:text-2xl desktop:text-2xl">SUNDAY . JUNE 23 . 2024</p>
                     </div>
                     <br>
                     <div class="flex justify-center">
                         <div>
-                            <div class="font-junge flex justify-center text-center text-xs phone:text-xs tablet:text-xl laptop:text-xl desktop:text-xl">
+                            <div class="font-garamond flex justify-center text-center text-xs phone:text-xs tablet:text-2xl">
                                 <p>Dear To <span class="block">Bapak/Ibu/Sahabat</span></p>
                             </div>
-                            <p id="name" class="font-junge text-center font-bold m-3 text-2xl"></p>
+                            <p id="name" class="font-garamond text-center font-bold m-3 text-2xl tablet:text-3xl"></p>
                             <div class="flex justify-center">
-                                <button class="open-button font-junge p-2 tracking-wide border border-black rounded-md hover:bg-gray-400 duration-300 hover:cursor-pointer" onclick="openButton('toggleButton')">
-                                        <p>Open</p>
+                                <button class="open-button font-garamond p-2 tracking-wide border border-black rounded-md hover:bg-gray-400 duration-300 hover:cursor-pointer" onclick="openButton('toggleButton')">
+                                        <p class="tablet:text-2xl">Open</p>
                                 </button>
                             </div>
                         </div>
@@ -202,48 +209,52 @@
                     <img src="./img/flower2.png" alt="" class="w-48 -scale-x-100 rotate-180">
                 </div>
             </div>
+
+        <div class="w-10/12 m-auto tablet:w-full tablet:m-0">
             <div class="flex justify-evenly bg-white">
                 <div class="relative mt-10">
                         <img src="./img/index.png" alt="" class="m-auto w-64 phone:w-5/6 desktop:w-3/5 animate-slowspin">
-                    <div class="font-bold tracking-widest text-center mb-5 absolute top-14 left-10 phone:top-12 desktop:top-32 phone:left-20 desktop:left-60">
+                    <div class="font-bold tracking-widest text-center mb-5 absolute top-10 left-12 phone:top-12 desktop:top-24 phone:left-12 desktop:left-64">
                         <center>
-                            <img src="./img/logo.png" alt="" class="w-36 phone:w-36 desktop:w-52">
+                            <img src="./img/logo.png" alt="" class="w-32 phone:w-32 desktop:w-52">
                         </center>
-                        <p class="text-center font-junge text-xs phone:text-xs tablet:text-xl laptop:text-xl desktop:text-xl">SUNDAY . JUNE 23 . 2024</p>
+                        <p class="text-center font-garamond text-xs phone:text-xs tablet:text-xl laptop:text-xl desktop:text-xl">SUNDAY . JUNE 23 . 2024</p>
                         <br>
                         <i class="fa-solid fa-caret-down text-2xl animate-bounce"></i>
                     </div>
                 </div>
             </div>
             <div class="bg-white" id="Open">
-                <div class="flex justify-center p-10">
+            <div class="bg-white content pb-10 pt-20" id="content1">
+                <div class="flex justify-center">
                     <div class="flex justify center text-center">
-                        <hr class="border border-gray-400 w-16 phone:w-16 tablet:w-28 laptop:w-28 desktop:w-28 m-2">
+                        <hr class="border-2 border-gray-400 w-28 phone:w-28 tablet:w-56 laptop:w-56 desktop:w-56 m-2">
                     <div>
-                        <i class="fa-solid fa-heart text-sm"></i>
+                        <i class="fa-solid fa-heart"></i>
                     </div>
-                        <hr class="border border-gray-400 w-16 phone:w-16 tablet:w-28 laptop:w-28 desktop:w-28 m-2">
+                        <hr class="border-2 border-gray-400 w-28 phone:w-28 tablet:w-56 laptop:w-56 desktop:w-56 m-2">
                 </div>
-            </div>
-            <div class="bg-white content" id="content1">
-                <div class="p-10">
+                </div>
+                <div class="p-5 tablet:p-10">
+                    <img src="./img/bismillah.png" class="w-2/3 m-auto pb-5 pt-10 tablet:w-1/3 tablet:pb-10" alt="">
+                    <p></p>
                     <div>
                         <img src="./img/image1.jpeg" alt="">
                     </div>
                     <div class="flex justify-end m-5">
                         <div>
-                            <hr class="border-2 border-gray-400 w-36 mt-2">
+                            <hr class="border-2 border-gray-400 w-28 mt-2">
                         </div>
-                        <div class="ml-5 text-2xl">
-                            <p class="font-dancing font-bold">QS. Ar-Rum:21</p>
+                        <div class="ml-5">
+                            <p class="font-parisienne text-2xl desktop:font-bold">Qs. Ar-Rum:21</p>
                         </div>
                     </div>
                     <div>
-                        <div>
+                        <div class="text-left">
                             <i class="fa-solid fa-quote-left text-gray-400 text-3xl"></i>
                         </div>
-                        <div class="text-center p-5 font-junge">
-                            <p>Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu istri-istri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir</p>
+                        <div class="text-center p-5 font-garamond">
+                            <p class="text-base tablet:text-xl">Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu istri-istri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir</p>
                         </div>
                         <div class="text-right">
                             <i class="fa-solid fa-quote-right text-gray-400 text-3xl"></i>
@@ -252,38 +263,21 @@
                 </div>
             </div>
             <div class="bg-white content" id="content2">
-                    <div class="flex justify-center p-5 phone:p-5 tablet:p-14 laptop:p-14 desktop:p-14">
-                        <div class="w-1/2 mt-16 phone:mt-16 tablet:mt-0 laptop:mt-0 desktop:mt-0">
-                            <div class="carousel" id="carousel1">
-                                <div class="carousel-inner">
-                                    <div class="carousel-slide active">
-                                        <img src="./img/kevin2.jpg" alt="Slide 1">
-                                    </div>
-                                    <div class="carousel-slide">
-                                        <img src="./img/kevin3.jpg" alt="Slide 2">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-1/3 font-junge m-5 phone:m-5 tablet:m-10 laptop:m-10desktop:m-10">
-                            <div>
-                                <p class="font-bold text-3xl phone:text-3xl tablet:text-5xl laptop:text-5xl desktop:text-5xl font-dancing">The<span class="block">Groom</span></p>
-                                <br>
-                                <p class="text-wrap">Keluarga Bpk. Wawan Yogaswara dan Ibu Keniawati</p>
-                                <br>
-                                <button class="rounded-full bg-slate-400 hover:bg-slate-600 duration-300 ">
-                                    <a href="https://www.instagram.com/kevindananjaya" class="text-2xl text-white "><i class="fa-brands fa-instagram m-3"></i></a>
-                                </button>
-                            </div>
-                        </div>
+                <div class="flex justify-center">
+                    <div class="flex justify center text-center">
+                        <hr class="border-2 border-gray-400 w-28 phone:w-28 tablet:w-56 laptop:w-56 desktop:w-56 m-2">
+                    <div>
+                        <i class="fa-solid fa-heart"></i>
                     </div>
+                        <hr class="border-2 border-gray-400 w-28 phone:w-28 tablet:w-56 laptop:w-56 desktop:w-56 m-2">
+                </div>
+                </div>
+                <p class="font-parisienne font-bold text-4xl text-center m-5 mt-20 tablet:text-5xl">Bride & Groom</p>
                     <div class="flex justify-center p-5 phone:p-5 tablet:p-14 laptop:p-14 desktop:p-14">
-                        <div class="w-1/3 font-junge m-5 phone:m-5 tablet:m-10 laptop:m-10desktop:m-10">
+                        <div class="w-1/2 font-garamond mr-2 phone:m-5 tablet:m-10 laptop:m-10 desktop:m-10">
                             <div>
-                                <p class="font-bold text-3xl phone:text-3xl tablet:text-5xl laptop:text-5xl desktop:text-5xl font-dancing text-right">The<span class="block">Bride</span></p>
-                                <br>
-                                <p class="text-wrap text-right">Keluarga Bpk. Ruslan Jaelani dan Ibu Ida Sriwida A</p>
-                                <br>
+                                <p class="text-xl font-bold font-garamond block text-right tablet:text-5xl">Windu Widuri</p>
+                                <p class="text-wrap text-right text-sm pl-3 tablet:text-xl">Keluarga Bpk. Ruslan Jaelani dan <span class="inline phone:inline laptop:block desktop:block">Ibu Ida Sriwida A</span></p>
                                 <div class="flex justify-end">
                                     <button class="rounded-full bg-slate-400 hover:bg-slate-600 duration-300">
                                         <a href="https://www.instagram.com/winduwidurii" class="text-2xl text-white "><i class="fa-brands fa-instagram m-3"></i></a>
@@ -291,7 +285,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="w-1/2 mt-16 phone:mt-16 tablet:mt-0 laptop:mt-0 desktop:mt-0">
+                        <div class="w-3/5 phone:mt-10 tablet:mt-0 laptop:mt-0 desktop:mt-0">
                             <div class="carousel" id="carousel2">
                                 <div class="carousel-inner">
                                     <div class="carousel-slide active">
@@ -304,27 +298,51 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="flex mb-20 justify-center p-5 phone:p-5 tablet:p-14 laptop:p-14 desktop:p-14">
+                        <div class="w-3/5 mt-3 phone:mt-16 tablet:mt-0 laptop:mt-0 desktop:mt-0">
+                            <div class="carousel" id="carousel1">
+                                <div class="carousel-inner">
+                                    <div class="carousel-slide active">
+                                        <img src="./img/kevin2.jpg" alt="Slide 1">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="./img/kevin3.jpg" alt="Slide 2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-1/2 font-garamond ml-2 tablet:m-10 laptop:m-10 desktop:m-10">
+                            <div>
+                                <p class="text-lg font-bold font-garamond block tablet:text-5xl">Mohammad Kevin Dananjaya</p>
+                                <p class="text-wrap text-sm tablet:text-xl">Keluarga Bpk. Wawan Yogaswara dan <span class="inline phone:inline laptop:block desktop:block">Ibu Keniawati</span></p>
+                                <button class="rounded-full bg-slate-400 hover:bg-slate-600 duration-300 ">
+                                    <a href="https://www.instagram.com/kevindananjaya" class="text-2xl text-white "><i class="fa-brands fa-instagram m-3"></i></a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
             </div>
-            <div class="flex justify-center">
-                <div class="flex justify center text-center">
-                    <hr class="border-2 border-gray-400 w-28 phone:w-28 tablet:w-56 laptop:w-56 desktop:w-56 m-2">
-                <div>
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-                    <hr class="border-2 border-gray-400 w-28 phone:w-28 tablet:w-56 laptop:w-56 desktop:w-56 m-2">
-            </div>
-        </div>
             <div class="content" id="content3">
-                <div class="p-7">
-                    <p class="text-center font-dancing font-bold text-4xl">Hitung Mundur</p>
-                    <p class="text-center font-junge text-lg">Hari Bahagia</p>
+                <div class="flex justify-center">
+                    <div class="flex justify center text-center">
+                        <hr class="border-2 border-gray-400 w-28 phone:w-28 tablet:w-56 laptop:w-56 desktop:w-56 m-2">
+                    <div>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                        <hr class="border-2 border-gray-400 w-28 phone:w-28 tablet:w-56 laptop:w-56 desktop:w-56 m-2">
                 </div>
-                <div class="text-center font-montserrat text-5xl tracking-wide text-gray-600 pb-10">
+            </div>
+                <div class="p-7 pt-20">
+                    <p class="text-center font-parisienne font-bold text-4xl tablet:text-5xl">Hitung Mundur</p>
+                    <p class="text-center font-garamond text-lg tablet:text-4xl">Hari Bahagia</p>
+                </div>
+                <div class="text-center font-montserrat text-5xl tracking-wide text-gray-600 pb-20">
                     <p id="countdown"></p>
                 </div>
             </div>
-            <div class="bg-white content" id="content8">
-                <div class="flex justify-center">
+            <div class="bg-white content pb-20" id="content8">
+                <div class="flex justify-center pb-20">
                     <div class="flex justify center text-center">
                         <hr class="border-2 border-gray-400 w-28 phone:w-28 tablet:w-56 laptop:w-56 desktop:w-56 m-2">
                     <div>
@@ -334,27 +352,27 @@
                 </div>
                 </div>
                 <div class="m-5">
-                    <p class="font-dancing font-bold text-4xl text-center">Jadwal Acara<span class="font-normal text-lg block font-junge">Minggu, 23 Juni 2024</span></p>
+                    <p class="font-parisienne font-bold text-4xl text-center tablet:text-5xl">Jadwal Acara<span class="font-normal text-lg block font-garamond tablet:text-4xl">Minggu, 23 Juni 2024</span></p>
                 </div>
-                <div class="flex justify-center">
-                    <div class="font-junge text-center m-5 border border-gray-400 rounded-md p-5">
+                <div class="flex justify-center grid-cols-2 tablet:text-2xl">
+                    <div class="font-garamond text-center m-5 border border-gray-400 rounded-md p-3">
                         <p class="text-lg block font-bold">Akad</p>
                         <p>Pukul</p>
                         <p>08.00 - 10.00</p>
                     </div>
                     <div>
-                        <div class="font-junge text-center m-5 border border-gray-400 rounded-md p-5">
+                        <div class="font-garamond text-center m-5 border border-gray-400 rounded-md p-3">
                             <p class="text-lg block font-bold">Resepsi</p>
                             <p>Pukul</p>
                             <p>11.00 - 14.00</p>
                         </div>
                     </div>
                 </div>
-                <div class="text-center font-junge inline font-bold text-base phone:text-base tablet:text-xl laptop:text-xl desktop:text-xl">
+                <div class="text-center font-garamond inline font-bold text-base phone:text-base tablet:text-xl laptop:text-xl desktop:text-xl">
                     <p><i class="fa-solid fa-location-dot text-gray-400 mr-5"></i>Asstro Grill Garden Tasikmalaya</p>
                 </div>
-                <div class="flex justify-center mt-10">
-                    <button class="border border-black p-2 rounded-md font-junge hover:bg-gray-300 duration-300"><a href="https://maps.app.goo.gl/E3TievDniZPnEw796">Open Maps</a></button>
+                <div class="flex justify-center mt-5">
+                    <button class="border border-black p-2 rounded-md font-garamond hover:bg-gray-300 duration-300"><a href="https://maps.app.goo.gl/E3TievDniZPnEw796">Open Maps</a></button>
                 </div>
             </div>
             <div class="bg-white content" id="content4">
@@ -370,8 +388,8 @@
         </div>
         <div class="bg-white content" id="content5">
             <div>
-                <p class="text-center font-dancing font-bold text-4xl">Our Moments</p>
-                <p class="text-center font-junge text-lg">Together</p>
+                <p class="text-center font-parisienne font-bold text-4xl tablet:text-5xl">Our Moments</p>
+                <p class="text-center font-garamond text-lg tablet:text-4xl">Together</p>
             </div>
             <div class="p-5">
                 <div id="freewall" class="free-wall"></div>
@@ -389,30 +407,31 @@
             </div>
         </div>
             <div class="text-center p-5">
-                <p class=" font-dancing font-bold text-4xl mt-5">Hadiah Digital</p>
+                <p class=" font-parisienne font-bold text-4xl mt-5 tablet:text-5xl">Hadiah Digital</p>
                 <br>
-                <p class="font-junge text-base">Bagi saudara bapak/ibu/saudara/i yang ingin mengirimkan hadiah pernikahan dapat melalui rekening berikut</p>
+                <p class="font-garamond text-lg tablet:text-xl">Bagi saudara bapak/ibu/saudara/i yang ingin mengirimkan hadiah pernikahan dapat melalui rekening berikut</p>
             </div>
             <div class="flex justify-center">
-                <button id="openModalBtn" class="border border-black rounded-md hover:bg-gray-400 duration-300 font-junge p-3 text-sm"><i class="fa-solid fa-gift"></i>  Klik Disini!</button>
+                <button id="openModalBtn" class="border border-black rounded-md hover:bg-gray-400 duration-300 font-garamond p-3 text-sm tablet:text-xl"><i class="fa-solid fa-gift"></i>  Klik Disini!</button>
             </div>
         </div>
 
-        <div class="bg-black font-junge text-white mt-10">
-            <div class="p-10 content" id="content8">
-                <p class="text-center text-sm m-10">Merupakan kebahagiaan dan kehormatan bagi kami bila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan do'a restu kepada kami</p>
-                <p class="font-dancing text-5xl text-center font-bold">Terima Kasih</p>
-            <p class="font-dancing text-2xl text-center">Windu & Kevin</p>
+        <div class="bg-black font-garamond text-white mt-10">
+            <div class="p-5 content" id="content8">
+                <p class="text-center text-lg m-5 mb-10 tablet:text-xl">Merupakan kebahagiaan dan kehormatan bagi kami bila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan do'a restu kepada kami</p>
+                <p class="font-parisienne text-4xl text-center font-bold tablet:text-5xl">Terima Kasih</p>
+            <p class="font-parisienne text-2xl text-center tablet:text-4xl">Windu & Kevin</p>
             </div>
             <br>
             <br>
-            <p class="text-center">© Made by Kamii_2187/LostKamii</p>
+            <p class="text-center tablet:text-2xl">© Made by Kamii_2187/LostKamii</p>
         </div>
     </div>
+</div>
 
-<div id="textModal" class="text-modal font-junge">
+<div id="textModal" class="text-modal font-garamond">
   <div class="modal-content">
-    <div class="modal-text bg-white m-10">
+    <div class="modal-text bg-white m-10 tablet:text-xl">
         <p>Silahkan transfer hadiah digital ke rekening berikut</p>
       <div class="block phone:block tablet:flex laptop:flex desktop:flex justify-center rounded-md">
         <div class="flex justify-center m-2">
@@ -430,7 +449,7 @@
         <div class="flex justify-center m-2">
             <div class="p-10 text-black m-10 shadow-xl">
                 <div class="flex justify-center">
-                    <img src="./img/mandiri.png" alt="" class="w-36 m-5">
+                    <img src="./img/bri.png" alt="" class="w-36 m-5">
                 </div>
                 <p>a.n Windu Widuri <span class="block">089301028995539</span></p>
                 <div class="">
@@ -451,7 +470,7 @@
   <img class="modal-content" id="modalImg">
 </div>
 
-<button id="toggleButton" class="hidden bg-gray-400 text-white text-2xl fixed top-5 right-5 rounded-full w-14 h-14 animate-spin"><i class="fa-solid fa-compact-disc"></i></button>
+<button id="toggleButton" class="hidden bg-gray-400 text-white text-2xl fixed top-5 right-5 rounded-full w-14 h-14 animate-spin tablet:text-xl"><i class="fa-solid fa-compact-disc"></i></button>
 
 
 </body>
