@@ -1,4 +1,3 @@
-document.addEventListener('contextmenu', event => event.preventDefault());
 // Set the date we're counting down to
 var countDownDate = new Date("June 23, 2024 08:00:00").getTime();
     
